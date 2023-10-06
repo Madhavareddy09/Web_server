@@ -2,7 +2,6 @@
 name:Madhavareddy
 id:23009929
 Dept: AIML
-phn no:9492243309
 mail:madhavrockzz09@gmail.com
 # AIM:
 
@@ -30,9 +29,32 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
-Type your code here
-# OUTPUT:
+from http.server import HTTPServer, BaseHTTPRequestHandler
 
+content = """
+<html>
+<head>
+<body>
+<h1>Welcome</h1>
+</body>
+</head>
+</html>
+"""
+
+class HelloHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request recieved")
+        self.send_response(200)
+        self.send_header('Content-type','text/html;charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+print("This is my webserver")
+server_address = ('',80)
+httpd = HTTPServer(server_address,HelloHandler)
+httpd.serve_forever()
+# OUTPUT:
+![Alt Text](images/Screenshot%202023-10-05%20093501.png)
 # RESULT:
 
 The program is executed succesfully
