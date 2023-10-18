@@ -55,7 +55,7 @@ httpd = HTTPServer(server_address,HelloHandler)
 httpd.serve_forever()
 ```
 # OUTPUT:
-![output]("C:\Users\admin\Untitled Folder\Web_server\images\webserver1.png")
+![output](images/webserver1.png)
 # RESULT:
 
 The program is executed succesfully
