@@ -1,7 +1,7 @@
 # Developing a Simple Webserver
-name:Madhavareddy
+Name:Madhavareddy
 
-id:23009929
+ID:23009929
 
 Dept: AIML
 # AIM:
@@ -36,16 +36,19 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <html>
 <head>
+</head>
 <body>
 <h1>Top Five Web Application Development Frameworks</h1>
-<b>
-<p>1.Django</p>
-<p>2. MEAN Stack</p>
-<p>3. React</p>
-</b>
+
+<h1>1. Django</h1>
+<h1>2. MEAN Stack</h1>
+<h1>3. React</h1>
+<h1>4. Ruby on Rails</h1>
+<h1>5. Angular</h1>
+
 </body>
-</head>
 </html>
+"""
 class HelloHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Get request recieved")
@@ -60,7 +63,7 @@ httpd = HTTPServer(server_address,HelloHandler)
 httpd.serve_forever()
 ```
 # OUTPUT:
-![output](images/webserver1.png)
+![output](images/web%20server%202.png)
 # RESULT:
 
 The program is executed succesfully
